@@ -117,10 +117,10 @@
             </objects>
             <point key="canvasLocation" x="519" y="-800"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Trivium View Controller-->
         <scene sceneID="Dks-fD-KX0">
             <objects>
-                <viewController id="ydd-gl-ePe" sceneMemberID="viewController">
+                <viewController id="ydd-gl-ePe" customClass="FISAddTriviumViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7MC-Qv-PCB"/>
                         <viewControllerLayoutGuide type="bottom" id="h53-BE-k03"/>
@@ -135,14 +135,30 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4OH-6E-bdk">
-                                <rect key="frame" x="137" y="269" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <rect key="frame" x="119" y="269" width="83" height="30"/>
+                                <state key="normal" title="Save button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveTriviumButtonTapped:" destination="ydd-gl-ePe" eventType="touchUpInside" id="ySk-iP-ntG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kw5-fU-YG2">
+                                <rect key="frame" x="137" y="323" width="48" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonTapped:" destination="ydd-gl-ePe" eventType="touchUpInside" id="CmI-c5-E2e"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="addTriviumTextField" destination="vSk-2Z-8oN" id="9zU-3F-FBS"/>
+                        <outlet property="newTriviumTextField" destination="vSk-2Z-8oN" id="P6d-Iq-gzC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z5v-FP-bji" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -181,7 +197,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="aEH-FB-czp">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="uz9-FM-GHX"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="uz9-FM-GHX">
+                            <connections>
+                                <segue destination="ydd-gl-ePe" kind="modal" identifier="addNewTriviumSegueID" id="7el-ss-vWv"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dlz-wJ-WHX" userLabel="First Responder" sceneMemberID="firstResponder"/>
