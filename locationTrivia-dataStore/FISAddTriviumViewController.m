@@ -41,7 +41,10 @@
 
 - (IBAction)saveTriviumButtonTapped:(id)sender {
 //    FISLocationsDataStore *locationStore = [FISLocationsDataStore sharedLocationsDataStore];
-    self.triviumToAdd.content = self.addTriviumTextField.text;
+    FISTrivia *ourTriviaObject = [[FISTrivia alloc] initWithContent:self.triviumToAdd.content Likes:0];
+    NSString *newTriviumText = self.addTriviumTextField.text;
+    [ourTriviaObject setContent:newTriviumText];
+    
     [self.trivia addObject:self.triviumToAdd];
     [self dismissViewControllerAnimated:YES completion:nil];
 //Need to change the [NSArray of FISTrivia] in the location in the [NSArray of Locations] on Data Manager's
