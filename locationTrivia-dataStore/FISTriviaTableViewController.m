@@ -9,6 +9,7 @@
 #import "FISTriviaTableViewController.h"
 #import "FISTrivia.h"
 
+
 @interface FISTriviaTableViewController ()
 
 @end

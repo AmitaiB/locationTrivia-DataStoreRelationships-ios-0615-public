@@ -160,6 +160,8 @@
         FISTriviaTableViewController *triviaVC = segue.destinationViewController;
         
         triviaVC.trivia = location.trivia;
+        //Knowing the row will allow us to pinpoint which location's trivia needs to be altered two VC's down.
+        triviaVC.locationIndexPathRow = ip.row;
     }
     
 

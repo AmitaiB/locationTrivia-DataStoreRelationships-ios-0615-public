@@ -10,5 +10,6 @@
 
 @interface FISTriviaTableViewController : UITableViewController
 @property (strong, nonatomic) NSArray *trivia;
+@property (nonatomic) NSInteger *locationIndexPathRow;
 
 @end
