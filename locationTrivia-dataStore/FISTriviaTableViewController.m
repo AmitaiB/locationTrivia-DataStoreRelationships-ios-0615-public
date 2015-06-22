@@ -118,7 +118,7 @@
 {
     if ([segue.identifier isEqualToString: @"addNewTriviumSegueID"]) {
         FISAddTriviumViewController *addTriviumVC = segue.destinationViewController;
-        addTriviumVC.trivia = [self.trivia mutableCopy];
+        self.locationToPassIfAddingTrivia = addTriviumVC.ourLocation;
     }
     
     // Get the new view controller using [segue destinationViewController].

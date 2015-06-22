@@ -10,6 +10,8 @@
 #import "FISLocation.h"
 
 @interface FISAddTriviumViewController : UIViewController
-@property (nonatomic, strong) NSMutableArray *trivia;
+
+//  Adds the trivium by setter-ing the location's trivia array.
+@property (nonatomic, strong) FISLocation *ourLocation;
 
 @end

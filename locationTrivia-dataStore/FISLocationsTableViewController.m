@@ -160,6 +160,7 @@
         FISTriviaTableViewController *triviaVC = segue.destinationViewController;
         
         triviaVC.trivia = location.trivia;
+        triviaVC.locationToPassIfAddingTrivia = location;
     }
     
 

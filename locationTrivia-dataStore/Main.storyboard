@@ -157,7 +157,6 @@
                     </view>
                     <connections>
                         <outlet property="addTriviumTextField" destination="vSk-2Z-8oN" id="9zU-3F-FBS"/>
-                        <outlet property="newTriviumTextField" destination="vSk-2Z-8oN" id="P6d-Iq-gzC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z5v-FP-bji" userLabel="First Responder" sceneMemberID="firstResponder"/>
