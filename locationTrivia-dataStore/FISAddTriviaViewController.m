@@ -7,8 +7,13 @@
 //
 
 #import "FISAddTriviaViewController.h"
+#import "FISLocationsDataStore.h"
+#import "FISLocation.h"
 
 @interface FISAddTriviaViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *addThisTriviumTextField;
+- (IBAction)saveButtonTapped:(id)sender;
+- (IBAction)cancelButtonTapped:(id)sender;
 
 @end
 
@@ -34,4 +39,16 @@
 }
 */
 
+- (IBAction)saveButtonTapped:(id)sender {
+    FISLocationsDataStore *dataStore = [FISLocationsDataStore sharedLocationsDataStore];
+    FISLocation *currentLocation = dataStore.locations[self.rowOfThisLocation];
+    NSString *contentToAdd = self.addThisTriviumTextField.text;
+    FISTrivia *triviumWithTheNewContent = [[FISTrivia alloc] initWithContent:contentToAdd Likes:0];
+    [currentLocation.trivia addObject:triviumWithTheNewContent];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)cancelButtonTapped:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

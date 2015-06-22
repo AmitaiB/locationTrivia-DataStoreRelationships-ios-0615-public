@@ -8,6 +8,7 @@
 
 #import "FISTriviaTableViewController.h"
 #import "FISTrivia.h"
+#import "FISAddTriviaViewController.h"
 
 
 @interface FISTriviaTableViewController ()
@@ -110,15 +111,21 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
+// Get the new view controller using [segue destinationViewController].
+// Pass the selected object to the new view controller.
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"triviaTableVCToAddTriviumVCSegueID"]) {
+        FISAddTriviaViewController *addTriviaVC = segue.destinationViewController;
+        addTriviaVC.rowOfThisLocation = self.locationIndexPathRow;
+        
+        
+    }
 }
-*/
+
 
 @end
