@@ -42,6 +42,9 @@
     NSString *brandNewTriviumText = self.addTriviumTextField.text;
     FISTrivia *ourTriviaObject = [[FISTrivia alloc] initWithContent:brandNewTriviumText Likes:0];
 //    [ourTriviaObject setContent:newTriviumText];
+    FISLocationsDataStore *store = self.locationStore;
+    NSMutableArray *mutie = store.locations;
+    
     [self.ourLocation.trivia addObject:ourTriviaObject];
 //    [self.trivia addObject:ourTriviaObject];
     [self dismissViewControllerAnimated:YES completion:nil];

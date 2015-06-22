@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "FISLocation.h"
+#import "FISLocationsDataStore.h"
 
 @interface FISAddTriviumViewController : UIViewController
 
-//  Adds the trivium by setter-ing the location's trivia array.
-@property (nonatomic, strong) FISLocation *ourLocation;
+@property (nonatomic, strong) FISLocationsDataStore *locationStore;
 
 @end
